@@ -12,7 +12,6 @@ import SpecialistValueSection from "@/components/SpecialistValueSection";
 import MissionSection from "@/components/MissionSection";
 import FinalCTASection from "@/components/FinalCTASection";
 import FAQSection from "@/components/FAQSection";
-import LeadFormSection from "@/components/LeadFormSection";
 import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
@@ -32,7 +31,6 @@ const Index = () => {
       <MissionSection />
       <FinalCTASection />
       <FAQSection />
-      <LeadFormSection />
       <FooterSection />
     </div>
   );

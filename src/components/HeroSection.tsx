@@ -24,8 +24,8 @@ const HeroSection = () => {
               Specialist Engineering Insurance
             </span>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl font-bold leading-[1.15] text-primary mb-6 text-balance">
-              Helping Contractors Navigate Project Risk with Clear Engineering Insurance Support
+            <h1 className="text-[2rem] sm:text-[2.5rem] lg:text-[3rem] xl:text-[3.25rem] font-bold leading-[1.1] text-primary mb-6 text-balance tracking-tight">
+              Clear Engineering Insurance Support for Contractors
             </h1>
 
             <p className="text-base md:text-lg text-enggisure-charcoal/80 leading-relaxed max-w-xl mb-4">

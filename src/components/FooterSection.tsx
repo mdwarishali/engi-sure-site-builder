@@ -58,7 +58,6 @@ const FooterSection = () => {
             <div>
               <h5 className="text-sm font-semibold mb-3 opacity-80">Get in Touch</h5>
               <ul className="space-y-2 text-sm opacity-60">
-                <li><a href="#lead-form" className="hover:opacity-100 transition-opacity">Submit Project Details</a></li>
                 <li><a href="mailto:support@enggisure.com" className="hover:opacity-100 transition-opacity">support@enggisure.com</a></li>
               </ul>
             </div>
