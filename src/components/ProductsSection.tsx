@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { HardHat, Wrench, Users, FileCheck, Cog, Zap, Monitor, Gauge } from "lucide-react";
+import productsImage from "@/assets/products-suite.jpg";
 
 const primaryProducts = [
   { icon: HardHat, title: "Contractors' All Risks (CAR)", desc: "For construction projects requiring broader protection against accidental loss or damage during execution." },
@@ -19,20 +20,40 @@ const ProductsSection = () => {
   return (
     <section id="products" className="section-padding section-tint">
       <div className="container-content">
-        <motion.div
-          className="text-center max-w-3xl mx-auto mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 text-balance">
-            Engineering Insurance Solutions for Contractor-Led Projects
-          </h2>
-          <p className="text-base text-muted-foreground">
-            EnggiSure focuses on project-linked insurance needs commonly relevant to contractors, infrastructure execution, and engineering risk.
-          </p>
-        </motion.div>
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center mb-12">
+          <motion.div
+            className="lg:col-span-7"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 text-balance leading-tight">
+              Engineering Insurance Solutions for Contractor-Led Projects
+            </h2>
+            <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
+              EnggiSure focuses on project-linked insurance needs commonly relevant to contractors, infrastructure execution, and engineering risk.
+            </p>
+          </motion.div>
+          <motion.div
+            className="lg:col-span-5"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <div className="rounded-xl overflow-hidden border border-border bg-card">
+              <img
+                src={productsImage}
+                alt="Engineering insurance product cards: CAR, EAR, Workmen Compensation, Surety Bond"
+                className="w-full h-[220px] md:h-[260px] object-contain p-2"
+                loading="lazy"
+                width={1280}
+                height={800}
+              />
+            </div>
+          </motion.div>
+        </div>
 
         {/* Primary */}
         <div className="grid sm:grid-cols-2 gap-6 mb-8">

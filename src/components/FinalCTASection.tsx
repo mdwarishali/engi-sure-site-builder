@@ -19,12 +19,9 @@ const FinalCTASection = () => {
             If your project needs engineering insurance support, start with a more structured approach. Share your project details, reduce confusion, and move toward the right policy with specialist support behind the process.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-6">
-            <Button size="lg" className="bg-enggisure-accent text-primary-foreground hover:bg-enggisure-accent/90 px-8 text-base font-semibold">
+          <div className="flex justify-center mb-6">
+            <Button size="lg" className="bg-enggisure-accent text-primary-foreground hover:bg-enggisure-accent/90 px-10 text-base font-semibold">
               Get a Quote
-            </Button>
-            <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 px-8 text-base font-semibold">
-              Get the Right Policy
             </Button>
           </div>
 

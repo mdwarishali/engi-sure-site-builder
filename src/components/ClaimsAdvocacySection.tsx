@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ShieldCheck } from "lucide-react";
+import claimsImage from "@/assets/claims-advocacy.jpg";
 
 const ClaimsAdvocacySection = () => {
   return (
@@ -32,23 +33,22 @@ const ClaimsAdvocacySection = () => {
             </div>
           </motion.div>
 
-          {/* Claims visual placeholder */}
+          {/* Claims illustration */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="flex items-center justify-center"
+            className="rounded-2xl overflow-hidden border border-enggisure-navy-light/30"
           >
-            <div className="w-full max-w-sm aspect-square rounded-2xl bg-enggisure-navy-light/30 border border-enggisure-navy-light/20 flex flex-col items-center justify-center p-10 text-center">
-              <div className="w-20 h-20 rounded-full bg-enggisure-accent/15 flex items-center justify-center mb-6">
-                <ShieldCheck size={36} className="text-enggisure-accent" />
-              </div>
-              <p className="text-lg font-semibold mb-2">Claims Advocacy</p>
-              <p className="text-sm opacity-60 leading-relaxed">
-                Stronger coordination, practical follow-through, and support aligned to your project reality.
-              </p>
-            </div>
+            <img
+              src={claimsImage}
+              alt="Insurance specialist supporting contractor through claim documentation"
+              className="w-full h-[320px] md:h-[420px] object-cover"
+              loading="lazy"
+              width={1100}
+              height={1100}
+            />
           </motion.div>
         </div>
       </div>

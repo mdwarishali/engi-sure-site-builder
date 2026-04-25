@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Target, Layers, ShieldCheck } from "lucide-react";
+import whyImage from "@/assets/why-enggisure.jpg";
 
 const pillars = [
   { icon: Target, label: "Specialist engineering insurance focus" },
@@ -35,7 +36,7 @@ const WhyEnggiSureSection = () => {
             </p>
           </motion.div>
 
-          {/* Value pillars visual */}
+          {/* Visual + Value pillars */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -43,17 +44,29 @@ const WhyEnggiSureSection = () => {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="space-y-5"
           >
-            {pillars.map((p, i) => (
-              <div
-                key={i}
-                className="card-elevated flex items-center gap-5"
-              >
-                <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center shrink-0">
-                  <p.icon size={22} className="text-enggisure-accent" />
+            <div className="rounded-xl overflow-hidden border border-border bg-card">
+              <img
+                src={whyImage}
+                alt="Engineering insurance specialist and contractor reviewing project blueprint"
+                className="w-full h-[260px] md:h-[300px] object-cover"
+                loading="lazy"
+                width={1100}
+                height={900}
+              />
+            </div>
+            <div className="grid sm:grid-cols-3 gap-3">
+              {pillars.map((p, i) => (
+                <div
+                  key={i}
+                  className="bg-card rounded-lg border border-border p-4 flex flex-col gap-3"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-enggisure-purple-light flex items-center justify-center shrink-0">
+                    <p.icon size={18} className="text-enggisure-purple" />
+                  </div>
+                  <span className="text-xs font-medium text-foreground leading-snug">{p.label}</span>
                 </div>
-                <span className="text-base font-medium text-foreground">{p.label}</span>
-              </div>
-            ))}
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>
