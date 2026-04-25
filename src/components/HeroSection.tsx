@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Shield, Zap, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-infrastructure.jpg";
+import heroImage from "@/assets/hero-contractors.jpg";
 
 const trustPoints = [
   { icon: Shield, text: "Built for project-based contractor risks" },
@@ -20,36 +20,38 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-enggisure-accent mb-4">
+            <span className="inline-block text-xs font-semibold tracking-widest uppercase text-enggisure-purple mb-4">
               Specialist Engineering Insurance
             </span>
 
             <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] xl:text-5xl font-bold leading-[1.15] text-primary mb-6 text-balance">
-              Engineering Insurance Built for Contractors Who Cannot Afford Wrong Coverage
+              Helping Contractors Navigate Project Risk with Clear Engineering Insurance Support
             </h1>
 
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mb-8">
-              From project-specific risk guidance to claims support and servicing assistance, EnggiSure helps contractors secure the right engineering insurance with greater clarity, speed, and confidence.
+            <p className="text-base md:text-lg text-enggisure-charcoal/80 leading-relaxed max-w-xl mb-4">
+              India's infrastructure and public project landscape is expanding rapidly, with contractors playing a central role in roads, energy, utilities, public assets, industrial development, and large-scale execution.
+            </p>
+            <p className="text-base md:text-lg text-enggisure-charcoal/80 leading-relaxed max-w-xl mb-8">
+              As project values rise and execution complexity increases, engineering insurance should not remain an afterthought. EnggiSure helps contractors approach project insurance with greater clarity, speed, and confidence — supporting better coverage decisions for project-based risks.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 mb-8">
+            <div className="flex flex-col sm:flex-row gap-3 mb-6">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-enggisure-navy-light px-8 text-base font-semibold">
                 Get a Quote
               </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-accent px-8 text-base font-semibold">
-                Get the Right Policy
-              </Button>
             </div>
 
-            <p className="text-sm text-muted-foreground mb-6">
-              Upload LOA · Auto-fill key project details · Confirm · Get started faster.
+            <p className="text-sm text-enggisure-charcoal/70 mb-8 font-medium">
+              Upload LOA · Auto-fill key project details · Review &amp; Confirm · Get the right premium.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="grid sm:grid-cols-3 gap-4">
               {trustPoints.map((point, i) => (
-                <div key={i} className="flex items-start gap-2">
-                  <point.icon size={16} className="text-enggisure-accent mt-0.5 shrink-0" />
-                  <span className="text-xs text-muted-foreground leading-snug">{point.text}</span>
+                <div key={i} className="flex items-start gap-2.5">
+                  <span className="w-7 h-7 rounded-full bg-enggisure-purple-light flex items-center justify-center shrink-0 mt-0.5">
+                    <point.icon size={14} className="text-enggisure-purple" />
+                  </span>
+                  <span className="text-xs text-enggisure-charcoal/80 leading-snug">{point.text}</span>
                 </div>
               ))}
             </div>
@@ -62,15 +64,14 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="relative"
           >
-            <div className="relative rounded-xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-xl overflow-hidden border border-border bg-enggisure-light">
               <img
                 src={heroImage}
-                alt="Large-scale infrastructure construction project with cranes and engineering teams"
-                className="w-full h-[320px] md:h-[440px] lg:h-[500px] object-cover"
+                alt="Civil contractors reviewing blueprints at an Indian infrastructure construction site with bridge, cranes and excavator"
+                className="w-full h-[320px] md:h-[440px] lg:h-[520px] object-cover"
                 width={1280}
-                height={896}
+                height={960}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-enggisure-dark/30 to-transparent" />
             </div>
           </motion.div>
         </div>
