@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['"DM Sans"', 'system-ui', 'sans-serif'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Axiforma', 'Inter', 'system-ui', 'sans-serif'],
+        body: ['Axiforma', 'Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -64,6 +64,9 @@ export default {
         enggisure: {
           navy: "hsl(var(--enggisure-navy))",
           "navy-light": "hsl(var(--enggisure-navy-light))",
+          purple: "hsl(var(--enggisure-purple))",
+          "purple-light": "hsl(var(--enggisure-purple-light))",
+          charcoal: "hsl(var(--enggisure-charcoal))",
           steel: "hsl(var(--enggisure-steel))",
           slate: "hsl(var(--enggisure-slate))",
           light: "hsl(var(--enggisure-light))",
