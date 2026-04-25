@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import faqImage from "@/assets/faq-support.jpg";
 
 const faqs = [
   {
@@ -36,42 +37,58 @@ const faqs = [
 const FAQSection = () => {
   return (
     <section id="faq" className="section-padding bg-background">
-      <div className="container-narrow">
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 text-balance">
-            Frequently Asked Questions
-          </h2>
-        </motion.div>
+      <div className="container-content">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <motion.div
+            className="lg:col-span-4 lg:sticky lg:top-28"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4 text-balance leading-tight">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-base text-muted-foreground leading-relaxed mb-6">
+              Common questions from contractors about engineering insurance support, servicing, and claims.
+            </p>
+            <div className="rounded-xl overflow-hidden border border-border bg-enggisure-light">
+              <img
+                src={faqImage}
+                alt="Contractor and advisor discussing engineering insurance questions"
+                className="w-full h-auto object-cover"
+                loading="lazy"
+                width={1100}
+                height={900}
+              />
+            </div>
+          </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          <Accordion type="single" collapsible className="space-y-3">
-            {faqs.map((faq, i) => (
-              <AccordionItem
-                key={i}
-                value={`faq-${i}`}
-                className="bg-card border border-border rounded-lg px-6 data-[state=open]:shadow-sm"
-              >
-                <AccordionTrigger className="text-left text-sm md:text-base font-semibold text-foreground hover:no-underline py-5">
-                  {faq.q}
-                </AccordionTrigger>
-                <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-5">
-                  {faq.a}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </motion.div>
+          <motion.div
+            className="lg:col-span-8"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <Accordion type="single" collapsible className="space-y-3">
+              {faqs.map((faq, i) => (
+                <AccordionItem
+                  key={i}
+                  value={`faq-${i}`}
+                  className="bg-card border border-border rounded-lg px-6 data-[state=open]:shadow-sm"
+                >
+                  <AccordionTrigger className="text-left text-sm md:text-base font-semibold text-primary hover:no-underline py-5">
+                    {faq.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-5">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

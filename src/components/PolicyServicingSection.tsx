@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FileText, RefreshCw, Bell, BarChart3, Copy } from "lucide-react";
+import servicingImage from "@/assets/servicing-support.jpg";
 
 const servicingFeatures = [
   { icon: FileText, label: "Endorsement support" },
@@ -44,59 +45,22 @@ const PolicyServicingSection = () => {
             </p>
           </motion.div>
 
-          {/* Portal mockup placeholder */}
+          {/* Servicing illustration */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="bg-card rounded-xl border border-border shadow-lg overflow-hidden"
+            className="rounded-xl overflow-hidden border border-border bg-card"
           >
-            <div className="bg-primary/5 px-6 py-3 border-b border-border flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-enggisure-accent/30" />
-              <div className="w-3 h-3 rounded-full bg-enggisure-steel/20" />
-              <div className="w-3 h-3 rounded-full bg-enggisure-steel/20" />
-              <span className="ml-3 text-xs text-muted-foreground font-medium">Policy Dashboard</span>
-            </div>
-            <div className="p-6 space-y-4">
-              {/* Simulated UI rows */}
-              <div className="flex items-center justify-between p-3 bg-accent/50 rounded-md">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded bg-enggisure-accent/15 flex items-center justify-center">
-                    <FileText size={14} className="text-enggisure-accent" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-medium text-foreground">CAR Policy — NH-48 Expansion</div>
-                    <div className="text-[11px] text-muted-foreground">Active · Expires Dec 2026</div>
-                  </div>
-                </div>
-                <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-enggisure-accent/10 text-enggisure-accent">Active</span>
-              </div>
-              <div className="flex items-center justify-between p-3 bg-accent/50 rounded-md">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded bg-enggisure-accent/15 flex items-center justify-center">
-                    <RefreshCw size={14} className="text-enggisure-accent" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-medium text-foreground">Extension Request — Solar Plant Phase 2</div>
-                    <div className="text-[11px] text-muted-foreground">Submitted · Under review</div>
-                  </div>
-                </div>
-                <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-enggisure-warm text-foreground">Pending</span>
-              </div>
-              <div className="flex items-center justify-between p-3 bg-accent/50 rounded-md">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded bg-enggisure-accent/15 flex items-center justify-center">
-                    <Bell size={14} className="text-enggisure-accent" />
-                  </div>
-                  <div>
-                    <div className="text-xs font-medium text-foreground">Claim Intimation — Metro Line 4</div>
-                    <div className="text-[11px] text-muted-foreground">Initiated · Documentation pending</div>
-                  </div>
-                </div>
-                <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-enggisure-accent/10 text-enggisure-accent">In Progress</span>
-              </div>
-            </div>
+            <img
+              src={servicingImage}
+              alt="Contractor and relationship manager coordinating policy servicing tasks"
+              className="w-full h-[320px] md:h-[420px] object-cover"
+              loading="lazy"
+              width={1100}
+              height={900}
+            />
           </motion.div>
         </div>
       </div>

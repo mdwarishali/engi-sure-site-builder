@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Upload, ClipboardCheck, FileCheck2 } from "lucide-react";
+import howItWorksImage from "@/assets/how-it-works.jpg";
 
 const steps = [
   {
@@ -44,7 +45,7 @@ const HowItWorksSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-12">
           {steps.map((step, i) => (
             <motion.div
               key={i}
@@ -69,6 +70,23 @@ const HowItWorksSection = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="rounded-xl overflow-hidden border border-border bg-card max-w-4xl mx-auto"
+        >
+          <img
+            src={howItWorksImage}
+            alt="Three-step engineering insurance process: upload, review, quotation"
+            className="w-full h-auto object-contain"
+            loading="lazy"
+            width={1280}
+            height={700}
+          />
+        </motion.div>
       </div>
     </section>
   );
