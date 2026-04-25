@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/axiforma');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,52 +7,54 @@
 
 @layer base {
   :root {
-    /* Deep navy — institutional trust */
-    --background: 210 20% 98%;
-    --foreground: 215 30% 15%;
+    /* EnggiSure brand — deep navy / purple accent / charcoal text */
+    --background: 0 0% 100%;
+    --foreground: 260 5% 16%; /* #27252A */
 
     --card: 0 0% 100%;
-    --card-foreground: 215 30% 15%;
+    --card-foreground: 260 5% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 30% 15%;
+    --popover-foreground: 260 5% 16%;
 
-    /* Deep navy primary */
-    --primary: 213 55% 20%;
-    --primary-foreground: 210 40% 98%;
+    /* Brand navy #053E84 */
+    --primary: 214 93% 27%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Slate secondary */
-    --secondary: 210 15% 95%;
-    --secondary-foreground: 215 30% 15%;
+    /* Soft neutral */
+    --secondary: 220 16% 96%;
+    --secondary-foreground: 260 5% 16%;
 
-    /* Muted steel */
-    --muted: 210 12% 93%;
-    --muted-foreground: 215 15% 50%;
+    --muted: 220 14% 95%;
+    --muted-foreground: 260 5% 38%;
 
-    /* Subtle blue-gray accent */
-    --accent: 205 45% 92%;
-    --accent-foreground: 213 55% 20%;
+    /* Brand purple #734B8E */
+    --accent: 282 30% 95%;
+    --accent-foreground: 282 30% 42%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 20% 88%;
-    --input: 214 20% 88%;
-    --ring: 213 55% 20%;
+    --border: 220 14% 90%;
+    --input: 220 14% 90%;
+    --ring: 214 93% 27%;
 
-    --radius: 0.5rem;
+    --radius: 0.625rem;
 
     /* EnggiSure custom tokens */
-    --enggisure-navy: 213 55% 20%;
-    --enggisure-navy-light: 213 45% 30%;
-    --enggisure-steel: 215 15% 50%;
-    --enggisure-slate: 215 20% 65%;
-    --enggisure-light: 210 20% 97%;
-    --enggisure-tint: 205 30% 95%;
-    --enggisure-accent: 199 70% 42%;
-    --enggisure-accent-light: 199 60% 92%;
-    --enggisure-dark: 215 40% 10%;
-    --enggisure-warm: 35 30% 96%;
+    --enggisure-navy: 214 93% 27%;          /* #053E84 */
+    --enggisure-navy-light: 214 75% 38%;
+    --enggisure-purple: 282 30% 42%;        /* #734B8E */
+    --enggisure-purple-light: 282 30% 95%;
+    --enggisure-charcoal: 260 5% 16%;       /* #27252A */
+    --enggisure-steel: 260 5% 45%;
+    --enggisure-slate: 220 10% 70%;
+    --enggisure-light: 220 16% 97%;
+    --enggisure-tint: 214 40% 97%;
+    --enggisure-accent: 282 30% 42%;
+    --enggisure-accent-light: 282 30% 95%;
+    --enggisure-dark: 214 60% 12%;
+    --enggisure-warm: 35 30% 97%;
 
     /* Sidebar (unused but required) */
     --sidebar-background: 0 0% 98%;
